@@ -10,8 +10,7 @@ const db = require("quick.db"); //
 const express = require("express"); //
 require("./util/eventLoader.js")(client); //
 const path = require("path"); //
-const snekfetch = require("snekfetch"); //
-const ms = require("ms"); //
+const snekfetch = require("snekfetch"); // //
 //
 
 var prefix = ayarlar.prefix; //

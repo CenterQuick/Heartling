@@ -48,7 +48,7 @@ const embed = new Discord.MessageEmbed()
     .addField(`Yetkili Toplam:`, `\`${kayıtlar}\` Kayıtlara Sahip.`)
     .setThumbnail(message.author.avatarURL())
 .setFooter(`NightMare Register`)
-.setColor('GREEN')
+.setColor('RED')
 client.channels.cache.get('840146116829773875').send(embed)
 
 

@@ -117,7 +117,7 @@ client.login(process.env.token);
 //-----------------------GİRENE-ROL-VERME----------------------\\     STG
 
 client.on("guildMemberAdd", member => {
-  member.roles.add("796056243386580992"); // UNREGİSTER ROLÜNÜN İDSİNİ GİRİN
+  member.roles.add("840135205578866718"); // UNREGİSTER ROLÜNÜN İDSİNİ GİRİN
 });
 
 //-----------------------GİRENE-ROL-VERME----------------------\\     STG
@@ -161,11 +161,11 @@ client.on("guildMemberAdd", member => {
 //-----------------------TAG-ROL----------------------\\
 
 client.on("userUpdate", async (stg, yeni) => {
-  var sunucu = client.guilds.cache.get("795575439212281876"); // Buraya Sunucu ID
+  var sunucu = client.guilds.cache.get("840130653251960852"); // Buraya Sunucu ID
   var uye = sunucu.members.cache.get(yeni.id);
-  var tag = "ΛV"; // Buraya Ekip Tag
-  var tagrol = "796361054153867294"; // Buraya Ekip Rolünün ID
-  var logKanali = "795576607250317353"; // Loglanacağı Kanalın ID
+  var tag = "夜"; // Buraya Ekip Tag
+  var tagrol = "840149931507318844"; // Buraya Ekip Rolünün ID
+  var logKanali = "840143729737990144"; // Loglanacağı Kanalın ID
 
   if (
     !sunucu.members.cache.has(yeni.id) ||
@@ -218,9 +218,9 @@ client.on("userUpdate", async (stg, yeni) => {
 //----------------------TAG-KONTROL----------------------\\
 
 client.on("guildMemberAdd", member => {
-  let sunucuid = "795575439212281876"; //Buraya sunucunuzun IDsini yazın
-  let tag = "ΛV"; //Buraya tagınızı yazın
-  let rol = "796361054153867294"; //Buraya tag alındığı zaman verilecek rolün IDsini yazın
+  let sunucuid = "840130653251960852"; //Buraya sunucunuzun IDsini yazın
+  let tag = "夜"; //Buraya tagınızı yazın
+  let rol = "840149931507318844"; //Buraya tag alındığı zaman verilecek rolün IDsini yazın
   if (member.user.username.includes(tag)) {
     member.roles.add(rol);
     const tagalma = new Discord.MessageEmbed()
@@ -229,7 +229,7 @@ client.on("guildMemberAdd", member => {
         `<@${member.id}> İsimli şahıs sunucuya taglı şekilde katıldı! Doğuştan bizden.`
       )
       .setTimestamp();
-    client.channels.cache.get("796361592735793163").send(tagalma);
+    client.channels.cache.get("840143729737990144").send(tagalma);
   }
 });
 
@@ -238,7 +238,7 @@ client.on("guildMemberAdd", member => {
 //-----------------------İSİM-DEĞİŞTİRME----------------------\\
 
 client.on("guildMemberAdd", member => {
-  member.setNickname(`ΛV Kayıtsız`);
+  member.setNickname(`夜 Kayıtsız`);
 });
 
 //-----------------------İSİM-DEĞİŞTİRME----------------------\\
@@ -246,7 +246,7 @@ client.on("guildMemberAdd", member => {
 //------------------BOTUN-SESTE-KALMA-KOMUTU------------------------------\\
 
 client.on("ready", () => {
-  client.channels.cache.get("802108027632615434").join();
+  client.channels.cache.get("840150535226916874").join();
 });
 
 //------------------BOTUN-SESTE-KALMA-KOMUTU------------------------------\\

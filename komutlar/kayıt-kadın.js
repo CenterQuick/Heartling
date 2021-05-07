@@ -15,7 +15,7 @@ if(!member) return message.channel.send(`Bir Kullanıcı Belirt.`)
 if(!member.roles.highest.position >= message.member.roles.highest.position) return message.channel.send(`Bu Kullanıcı Sizle Üst/Aynı Pozisyondadır.`)
 const x = message.guild.member(member)
 
-let tag = "ΛV"
+let tag = "夜"
 let isim = args[1]
 if(!isim) return message.channel.send(`Bir İsim Belirt`)
 

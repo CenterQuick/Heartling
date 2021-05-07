@@ -211,4 +211,4 @@ client.on("ready", () => {
   client.channels.cache.get("840150535226916874").join();
 });
 
-client.login(process.env.token);
+client.login(process.env.TOKEN);

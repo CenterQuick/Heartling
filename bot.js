@@ -112,7 +112,6 @@ client.on("error", e => {
   console.log(chalk.bgRed(e.replace(regToken, "that was redacted")));
 });
 
-client.login(process.env.token);
 
 //-----------------------GİRENE-ROL-VERME----------------------\\     STG
 
@@ -120,43 +119,6 @@ client.on("guildMemberAdd", member => {
   member.roles.add("840135205578866718"); // UNREGİSTER ROLÜNÜN İDSİNİ GİRİN
 });
 
-//-----------------------GİRENE-ROL-VERME----------------------\\     STG
-
-//-----------------------HOŞ-GELDİN-MESAJI----------------------\\
-
-
-//-----------------------HOŞ-GELDİN-MESAJI----------------------\\
-
-//------------------------------------------------------------------------------------------------------------------------------------\\
-
-client.on("guildMemberAdd", member => {
-  var moment = require("moment");
-  require("moment-duration-format");
-  moment.locale("tr");
-  var { Permissions } = require("discord.js");
-  var x = moment(member.user.createdAt)
-    .add(7, "days")
-    .fromNow();
-  var user = member.user;
-  x = x.replace("birkaç saniye önce", " ");
-  if (!x.includes("önce") || x.includes("sonra") || x == " ") {
-    const kytsz = member.guild.roles.cache.find(
-      r => r.id === "796056243386580992"
-    );
-    var rol = member.guild.roles.cache.get(""); // ŞÜPHELİ HESAP ROLÜNÜN İDSİNİ GİRİN
-    var kayıtsız = member.guild.roles.cache.get("811247585565343744"); // UNREGİSTER ROLÜNÜN İDSİNİ GİRİN
-    member.roles.add(rol);
-    member.roles.remove(kytsz);
-
-    member.user.send(
-      "Selam Dostum Ne Yazık ki Sana Kötü Bir Haberim Var Hesabın 1 Hafta Gibi Kısa Bir Sürede Açıldığı İçin Fake Hesap Katagorisine Giriyorsun Lütfen Bir Yetkiliyle İletişime Geç Onlar Sana Yardımcı Olucaktır."
-    );
-    setTimeout(() => {}, 1000);
-  } else {
-  }
-});
-
-//------------------------------------------------------------------------------------------------------------------------------------\\
 
 //-----------------------TAG-ROL----------------------\\
 
@@ -249,4 +211,4 @@ client.on("ready", () => {
   client.channels.cache.get("840150535226916874").join();
 });
 
-//------------------BOTUN-SESTE-KALMA-KOMUTU------------------------------\\
+client.login(process.env.token);

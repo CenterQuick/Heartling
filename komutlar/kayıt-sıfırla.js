@@ -3,7 +3,7 @@ const db = require('quick.db')
 
 exports.run = async (client, message, args) => {
   
-if(!["840130981016371207"].some(role => message.member.roles.cache.get(role)) && (!message.member.hasPermission("ADMINISTRATOR"))) return message.channel.send(`Bu Komutu Kullanabilmek İçin Yetkin Bulunmuyor.`)
+if(!["911598389752381441"].some(role => message.member.roles.cache.get(role)) && (!message.member.hasPermission("ADMINISTRATOR"))) return message.channel.send(`Bu Komutu Kullanabilmek İçin Yetkin Bulunmuyor.`)
 
 
 const member = message.guild.member(message.mentions.members.first() || message.guild.members.cache.get(args[0]));

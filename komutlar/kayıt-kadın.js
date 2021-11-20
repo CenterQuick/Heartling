@@ -3,19 +3,19 @@ const db = require('quick.db')
 
 exports.run = async (client, message, args) => {
   
-if(!["840137761793245184"].some(role => message.member.roles.cache.get(role)) && (!message.member.hasPermission("ADMINISTRATOR"))) return message.channel.send(`Bu Komutu Kullanabilmek İçin Yetkin Bulunmuyor.`)
+if(!["911598389681061957"].some(role => message.member.roles.cache.get(role)) && (!message.member.hasPermission("ADMINISTRATOR"))) return message.channel.send(`Bu Komutu Kullanabilmek İçin Yetkin Bulunmuyor.`)
   
-const kadin = message.guild.roles.cache.find(r => r.id === "840135771775434752")
-const kayıtsız = message.guild.roles.cache.find(r => r.id === "840135205578866718")
-const reglog = message.guild.channels.cache.find(c => c.id === "840144794022051840")
-const genelchat = message.guild.channels.cache.find(g => g.id === "840146116829773875")
+const kadin = message.guild.roles.cache.find(r => r.id === "911598389681061951")
+const kayıtsız = message.guild.roles.cache.find(r => r.id === "911598389681061949")
+const reglog = message.guild.channels.cache.find(c => c.id === "911598390226341928")
+const genelchat = message.guild.channels.cache.find(g => g.id === "911598390494789646")
 
 const member = message.guild.member(message.mentions.members.first() || message.guild.members.cache.get(args[0]));
 if(!member) return message.channel.send(`Bir Kullanıcı Belirt.`)
 if(!member.roles.highest.position >= message.member.roles.highest.position) return message.channel.send(`Bu Kullanıcı Sizle Üst/Aynı Pozisyondadır.`)
 const x = message.guild.member(member)
 
-let tag = "夜"
+let tag = "𝕷"
 let isim = args[1]
 if(!isim) return message.channel.send(`Bir İsim Belirt`)
 
@@ -49,7 +49,7 @@ const embed = new Discord.MessageEmbed()
     .setThumbnail(message.author.avatarURL())
 .setFooter(`NightMare Register`)
 .setColor('RED')
-client.channels.cache.get('840146116829773875').send(embed)
+client.channels.cache.get('911598390494789646').send(embed)
 
 
 genelchat.send(`<@${member.id}>, NightMare sunucusuna Hoş Geldin. Keyifli zaman geçirmeni dileriz.`)
@@ -59,11 +59,11 @@ genelchat.send(`<@${member.id}>, NightMare sunucusuna Hoş Geldin. Keyifli zaman
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ["register", "k", "kayit", "reg"],
+    aliases: ["kadın", "k", "girl", "kız"],
     permLevel: 0
 };
 
 exports.help = {
-    name: "kayıt"
+    name: "kız"
 }
 

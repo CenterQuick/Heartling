@@ -33,11 +33,6 @@ x.setNickname(`${tag} • ${isim}`)
 x.roles.add(erkek)
 x.roles.remove(kayıtsız)
 
-db.add(`kayıtSayi.${message.author.id}`, 1)
-db.add(`erkekUye.${message.author.id}`, 1)
-let kayitli = db.get(`erkekUye.${message.author.id}`);
-let kayıtlar = db.fetch(`kayıtSayi.${message.author.id}`); 
-
 const embed = new Discord.MessageEmbed()
 .setTitle(`Kayıt İşlemi Tamamlandı !`)
     .addField(`Kayıt Eden:`, `<@${message.author.id}> Tarafından Kayıt Edildi`) 
@@ -47,12 +42,12 @@ const embed = new Discord.MessageEmbed()
     .addField(`Yeni İsmin:`, `\`${tag} • ${isim}\` Olarak Güncellendi`) 
     .addField(`Yetkili Toplam:`, `\`${kayıtlar}\` Kayıtlara Sahip.`)
     .setThumbnail(message.author.avatarURL())
-.setFooter(`NightMare Register`)
-.setColor('RED')
+.setFooter(`Lightning Register`)
+.setColor('GREEN')
 client.channels.cache.get('911598390494789646').send(embed)
 
 
-genelchat.send(`<@${member.id}>, NightMare sunucusuna Hoş Geldin. Keyifli zaman geçirmeni dileriz.`)
+genelchat.send(`<@${member.id}>, Lightning sunucusuna Hoş Geldin. Keyifli zaman geçirmeni dileriz.`)
 
 }
 

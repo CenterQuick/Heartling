@@ -47,12 +47,12 @@ const embed = new Discord.MessageEmbed()
     .addField(`Yeni İsmin:`, `\`${tag} • ${isim}\` Olarak Güncellendi`) 
     .addField(`Yetkili Toplam:`, `\`${kayıtlar}\` Kayıtlara Sahip.`)
     .setThumbnail(message.author.avatarURL())
-.setFooter(`NightMare Register`)
+.setFooter(`Lightning Register`)
 .setColor('RED')
 client.channels.cache.get('911598390494789646').send(embed)
 
 
-genelchat.send(`<@${member.id}>, NightMare sunucusuna Hoş Geldin. Keyifli zaman geçirmeni dileriz.`)
+genelchat.send(`<@${member.id}>, Lightning sunucusuna Hoş Geldin. Keyifli zaman geçirmeni dileriz.`)
 
 }
 

@@ -33,17 +33,22 @@ x.setNickname(`${tag} • ${isim}`)
 x.roles.add(erkek)
 x.roles.remove(kayıtsız)
 
+db.add(`kayıtSayi.${message.author.id}`, 1)
+db.add(`erkekUye.${message.author.id}`, 1)
+let kayitli = db.get(`erkekUye.${message.author.id}`);
+let kayıtlar = db.fetch(`kayıtSayi.${message.author.id}`); 
+
 const embed = new Discord.MessageEmbed()
 .setTitle(`Kayıt İşlemi Tamamlandı !`)
     .addField(`Kayıt Eden:`, `<@${message.author.id}> Tarafından Kayıt Edildi`) 
     .addField(`Kayıt Edilen:`, `<@${member.id}> Kayıt Oldu`)
-    .addField(`Verilen Rol:`, `<@&${kadin.id}> Rolleri Verildi`) 
+    .addField(`Verilen Rol:`, `<@&${erkek.id}> Rolleri Verildi`) 
     .addField(`Alınan Rol:`, `<@&${kayıtsız.id}> Rolleri Alındı`)
     .addField(`Yeni İsmin:`, `\`${tag} • ${isim}\` Olarak Güncellendi`) 
     .addField(`Yetkili Toplam:`, `\`${kayıtlar}\` Kayıtlara Sahip.`)
     .setThumbnail(message.author.avatarURL())
 .setFooter(`Lightning Register`)
-.setColor('BLUE')
+.setColor('RED')
 client.channels.cache.get('911598390494789646').send(embed)
 
 

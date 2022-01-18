@@ -48,7 +48,7 @@ const embed = new Discord.MessageEmbed()
     .addField(`Yetkili Toplam:`, `\`${kayıtlar}\` Kayıtlara Sahip.`)
     .setThumbnail(message.author.avatarURL())
 .setFooter(`Lightning Register`)
-.setColor('RED')
+.setColor('BLUE')
 client.channels.cache.get('911598390494789646').send(embed)
 
 
